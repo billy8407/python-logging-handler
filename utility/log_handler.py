@@ -7,7 +7,7 @@ console_level = logging.INFO
 file_level = logging.ERROR
 
 absPath = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-formatter = logging.Formatter('%(filename)s:%(lineno)s - %(funcName)20s() %(message)s')
+formatter = logging.Formatter('%(asctime)s\n%(filename)s:%(lineno)s - %(funcName)s() - %(message)s')
 
 today = datetime.datetime.now()
 stf_date = today.strftime("%Y_%m_%d")
