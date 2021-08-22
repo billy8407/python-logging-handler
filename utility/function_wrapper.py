@@ -4,6 +4,7 @@ import time
 import traceback
 
 from utility.log_handler import logger
+from utility.thread_handler import close_thread, ThreadWithException, thread_list
 
 test_dict = {
     'x': 'x is error'
@@ -30,6 +31,9 @@ def log_measure(func):
             else:
                 logger.error('', extra=log_dict)
 
+            # Close threads if existed
+            close_thread(func.__name__)
+            
             sys.exit(1)
     
     return wrap
