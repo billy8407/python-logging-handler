@@ -1,6 +1,6 @@
-from utility.code_measure import time_measure
-from utility.function_wrapper import log_measure
-from utility.thread_handler import close_thread, ThreadWithException, thread_list
+from utility.log_handler.code_measure import time_measure
+from utility.log_handler.function_wrapper import log_measure
+from utility.log_handler.thread_handler import close_thread, ThreadWithException, thread_list
 
 
 @time_measure
