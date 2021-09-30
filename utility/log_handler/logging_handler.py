@@ -6,9 +6,12 @@ import sys
 console_level = logging.INFO
 file_level = logging.ERROR
 
-absPath = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+absPath = os.path.abspath(os.path.dirname(
+    os.path.dirname(os.path.dirname(__file__))))
+
 file_formatter = logging.Formatter(
     '%(asctime)s\n%(filename)s:%(lineno)s - %(orignal_func)s()\n%(traceback)s')
+
 stream_formatter = logging.Formatter('%(message)s')
 
 today = datetime.datetime.now()
