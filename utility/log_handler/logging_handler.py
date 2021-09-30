@@ -7,7 +7,8 @@ console_level = logging.INFO
 file_level = logging.ERROR
 
 absPath = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-file_formatter = logging.Formatter('%(asctime)s\n%(filename)s:%(lineno)s - %(orignal_func)s()\n%(traceback)s')
+file_formatter = logging.Formatter(
+    '%(asctime)s\n%(filename)s:%(lineno)s - %(orignal_func)s()\n%(traceback)s')
 stream_formatter = logging.Formatter('%(message)s')
 
 today = datetime.datetime.now()
@@ -17,7 +18,7 @@ logFile_name = '{}.log'.format(stf_date)
 folder_name = 'log'
 
 if folder_name not in os.listdir(absPath):
-    os.mkdir(os.path.join(absPath,folder_name))
+    os.mkdir(os.path.join(absPath, folder_name))
 
 folder_path = os.path.join(absPath, folder_name)
 logFile = os.path.join(folder_path, logFile_name)
