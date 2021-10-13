@@ -12,6 +12,8 @@ test_dict = {
 
 
 def log_measure(func):
+
+    # Used in logging.Formatter
     log_dict = {'orignal_func': func.__name__}
 
     @wraps(func)
